@@ -7,7 +7,7 @@ on:
 
 env:
   CHROME_EXTENSION_ID: llohomkiifbjdhmjdefhpdccbkealkma
-  FIREFOX_EXTENSION_ID: escape-saver-for-sheets
+  FIREFOX_EXTENSION_ID: 831f4cd1-24e8-4011-9a42-fff8beaffc22
 
 jobs:
   release:
