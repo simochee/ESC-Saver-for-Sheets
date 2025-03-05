@@ -5,7 +5,7 @@ const WXT_ZIP_CMD = String.raw`
 
 const WXT_SUBMIT_CMD = String.raw`
   pnpm wxt submit \
-    --chrome-zip ./.output/*-chrome.zip
+    --chrome-zip ./.output/*-chrome.zip \
     --firefox-zip ./.output/*-firefox.zip \
     --firefox-source-zip ./.output/*-sources.zip
 `;
