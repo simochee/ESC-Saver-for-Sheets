@@ -5,9 +5,9 @@ const WXT_ZIP_CMD = String.raw`
 
 const WXT_SUBMIT_CMD = String.raw`
   pnpm wxt submit \
-    --chrome-zip ./.output/*-chrome.zip \
-    --firefox-zip ./.output/*-firefox.zip \
-    --firefox-source-zip ./.output/*-sources.zip
+    --chrome-zip ./.output/*-chrome.zip
+    # --firefox-zip ./.output/*-firefox.zip \
+    # --firefox-source-zip ./.output/*-sources.zip
 `;
 
 /** @type {import('semantic-release').GlobalConfig} */
@@ -20,10 +20,7 @@ export default {
 		["@semantic-release/npm", { npmPublish: false }],
 		["@semantic-release/exec", { prepareCmd: WXT_ZIP_CMD }],
 		// 一度、拡張機能を公開したら有効化する
-		// [
-		//   '@semantic-release/exec',
-		//   { prepareCmd: WXT_SUBMIT_CMD }
-		// ],
+		["@semantic-release/exec", { prepareCmd: WXT_SUBMIT_CMD }],
 		[
 			"@semantic-release/github",
 			{

@@ -36,4 +36,8 @@ jobs:
         run: pnpm semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+          CHROME_EXTENSION_ID: llohomkiifbjdhmjdefhpdccbkealkma
+          CHROME_CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+          CHROME_CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
+          CHROME_REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          CHROME_SKIP_SUBMIT_REVIEW: true
