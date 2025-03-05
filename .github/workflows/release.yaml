@@ -32,11 +32,6 @@ jobs:
       - name: prepare wxt
         run: pnpm wxt prepare
 
-      - name: package extension
-        run: |
-          pnpm wxt zip
-          pnpm wxt zip -b firefox
-
       - name: release with semantic-release
         run: pnpm semantic-release
         env:

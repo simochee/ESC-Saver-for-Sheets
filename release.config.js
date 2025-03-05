@@ -1,3 +1,8 @@
+const WXT_ZIP_CMD = String.raw`
+  pnpm wxt zip
+  pnpm wxt zip -b firefox
+`;
+
 const WXT_SUBMIT_CMD = String.raw`
   pnpm wxt submit \
     --chrome-zip ./.output/*-chrome.zip \
@@ -13,6 +18,7 @@ export default {
 		"@semantic-release/release-notes-generator",
 		"@semantic-release/changelog",
 		["@semantic-release/npm", { npmPublish: false }],
+		["@semantic-release/exec", { prepareCmd: WXT_ZIP_CMD }],
 		// [
 		//   '@semantic-release/exec',
 		//   { prepareCmd: WXT_SUBMIT_CMD }
