@@ -19,6 +19,7 @@ export default {
 		"@semantic-release/changelog",
 		["@semantic-release/npm", { npmPublish: false }],
 		["@semantic-release/exec", { prepareCmd: WXT_ZIP_CMD }],
+		// 一度、拡張機能を公開したら有効化する
 		// [
 		//   '@semantic-release/exec',
 		//   { prepareCmd: WXT_SUBMIT_CMD }
