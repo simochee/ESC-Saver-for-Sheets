@@ -2,7 +2,7 @@ import { waitForElement } from "./dom";
 
 export default defineContentScript({
 	matches: ["https://docs.google.com/spreadsheets/d/*"],
-	runAt: "document_start",
+	runAt: "document_end",
 	async main() {
 		const cellInput = await waitForElement("#waffle-rich-text-editor");
 
